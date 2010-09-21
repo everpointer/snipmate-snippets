@@ -1,0 +1,9 @@
+require 'spec_helper'
+
+describe ${1:`Snippet_RubySpecNameFromFilename()`} do
+	
+	subject { Factory.build(:${2}) }
+
+	it {should be_valid}
+
+end
