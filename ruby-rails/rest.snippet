@@ -1,6 +1,6 @@
 respond_to do |f|
-	f.html
-	f.js do
-		${1:render}
+	f.html { ${1} }
+	f.json do
+		render :json => {${2}}
 	end
 end
