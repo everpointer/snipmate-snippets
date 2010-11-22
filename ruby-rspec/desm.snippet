@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe ${1:`Snippet_RubySpecNameFromFilename()`} do
 	
-	subject { Factory.build(:${2}) }
+	subject { Factory.build(:${2:`Snippet_RubyFactoryNameFromFilename()`}) }
 
 	it {should be_valid}
 

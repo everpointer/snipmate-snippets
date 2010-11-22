@@ -11,6 +11,10 @@ function! Snippet_RubyClassNameFromFilename(...)
     return Snippet_Camelcase(name)
 endfunction
 
+function! Snippet_RubyFactoryNameFromFilename(...)
+    return substitute(expand("%:t:r"), '_spec$', '', '')
+endfunction
+
 function! Snippet_RubySpecNameFromFilename(...)
     let name = substitute(expand("%:t:r"), '_spec$', '', '')
     if len(name) == 0
